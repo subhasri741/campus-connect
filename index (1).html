@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect - Student Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f3ff;color:#25243a;line-height:1.6}
+header{background:#302b63;color:white;text-align:center;padding:28px}
+nav{background:#49428c;text-align:center;padding:12px}
+nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
+.hero{padding:45px 15px;text-align:center;background:linear-gradient(120deg,#dcd8ff,#e6f4ff)}
+.hero h2{color:#302b63;margin-bottom:10px}
+button{background:#6256bd;color:white;border:0;border-radius:22px;padding:11px 20px;cursor:pointer}
+section{padding:30px 6%;text-align:center}
+section h2{color:#40378d;margin-bottom:18px}
+.cards{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.card{background:white;width:220px;padding:20px;border-radius:14px;box-shadow:0 3px 12px #c9c6e5}
+.card h3{color:#5146a0;margin-bottom:8px}
+table{margin:auto;border-collapse:collapse;background:white;width:100%;max-width:600px}
+th,td{padding:11px;border:1px solid #ddd}
+th{background:#5146a0;color:white}
+tr:nth-child(even){background:#f0efff}
+.tips{background:#e8e6ff}
+footer{background:#302b63;color:white;text-align:center;padding:20px}
+@media(max-width:600px){nav a{display:inline-block;margin:5px}.hero h2{font-size:23px}}
+</style>
+</head>
+<body>
+<header id="home"><h1>CampusConnect</h1><p>Your College Life, Organized!</p></header>
+<nav><a href="#home">Home</a><a href="#features">Features</a><a href="#timetable">Timetable</a><a href="#tips">Study Tips</a><a href="#contact">Contact</a></nav>
+<div class="hero"><h2>Welcome, Students!</h2><p>Plan your day, stay focused and make every college moment count.</p><button onclick="showTip()">Get a Study Tip</button><p id="tipMessage"></p></div>
+<section id="features"><h2>Student Features</h2><div class="cards">
+<div class="card"><h3>📚 Study Resources</h3><p>Organize your notes and learning materials.</p></div>
+<div class="card"><h3>🗓️ Daily Planner</h3><p>Plan classes, assignments and revision.</p></div>
+<div class="card"><h3>🎯 Goals</h3><p>Set small goals and make progress.</p></div>
+</div></section>
+<section id="timetable"><h2>Sample Daily Timetable</h2><table>
+<tr><th>Time</th><th>Activity</th></tr><tr><td>9:00 AM</td><td>Morning Class</td></tr>
+<tr><td>11:00 AM</td><td>Practical Session</td></tr><tr><td>1:00 PM</td><td>Lunch Break</td></tr>
+<tr><td>2:00 PM</td><td>Library / Study</td></tr><tr><td>4:00 PM</td><td>Assignment Work</td></tr>
+</table></section>
+<section class="tips" id="tips"><h2>Simple Study Tips</h2><div class="cards">
+<div class="card"><h3>Be Consistent</h3><p>Study a little every day.</p></div>
+<div class="card"><h3>Take Breaks</h3><p>Rest between study sessions.</p></div>
+<div class="card"><h3>Stay Organized</h3><p>Write down important deadlines.</p></div>
+</div></section>
+<footer id="contact"><h2>Contact CampusConnect</h2><p>Email: campusconnect@example.com</p><p>Web Essentials Student Project</p><p>© 2026 CampusConnect</p></footer>
+<script>
+function showTip(){
+let tips=["Start with one small task.","Keep your notes organized.","Revise today's lesson for ten minutes.","Take a short break and return with focus."];
+document.getElementById("tipMessage").textContent=tips[Math.floor(Math.random()*tips.length)];
+}
+</script>
+</body></html>
